@@ -1,0 +1,464 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.interface {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+    height: 10px; /* Altura da barra de rolagem */
+}
+
+/* Estilos da barra de rolagem vertical */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do polegar (parte arrastável) da barra de rolagem */
+    border-radius: 5px; /* Raio de borda do polegar */
+}
+
+/* Estilos da barra de rolagem horizontal */
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #888; /* Cor do polegar da barra de rolagem horizontal */
+    border-radius: 5px; /* Raio de borda do polegar */
+}
+
+/* Estilos de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilos de fundo da barra de rolagem horizontal */
+::-webkit-scrollbar-track:horizontal {
+    background-color: #f0f0f0; /* Cor de fundo da barra de rolagem horizontal */
+}
+
+.interface {
+    height: 10vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+ul {
+    list-style-type: none; /* Remove os pontos de todas as listas não ordenadas */
+}
+.page1, .page2, .page3 {
+    height: 100%; /* Ocupa a altura total da .interface */
+    position: sticky;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p, h1,h2 {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+.page1{
+    background-color:hsl(0, 0%, 5%);
+    font-size: 100px;
+    color: #fff;
+ 
+   
+}
+.page2{
+    background-color: #0A0E12;
+}
+.page3{
+    background-color: #0d1822;
+    ;
+}
+.interface{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+section{
+    scroll-snap-align: start;
+    height: 100vh;
+    position: sticky;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    columns: #fff;
+
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #ffffff;
+    }
+    25% {
+        border-color: #00bfe0; /* Troque esta cor pela cor desejada */
+    }
+    25% {
+        border-color: #213550; /* Troque esta cor pela cor desejada */
+    }
+    25% {
+        border-color: #217ee9;
+    }
+    25% {
+        border-color: #588ac4;
+    }
+   
+}
+
+.textpage1 {
+    padding: 50px;
+    border: 3px solid ;
+    animation: borderAnimation 6s infinite; /* A animação dura 4 segundos e é repetida infinitamente */
+}
+
+.textpage2p{
+font-size: 40px;
+}
+span{
+    font-weight: bold;
+    color: #fff;
+}
+.textpage2{
+    align-items: center;
+    display: block;
+    width: 1000px;
+    color: #cfcfcf;
+    
+    text-align: center;
+}
+.textpage2 h1{
+    color: #fff;
+    font-size: 60px;
+}
+.introducao{
+   position: relative;
+   display: flex;
+}
+
+  .cursor{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%,-50%);
+    transition: 0.1s;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background-color: #fff;
+  }
+
+  /* Estilo para o cabeçalho */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f0f0f000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px;
+    box-sizing: border-box;
+    z-index: 1000; /* Para garantir que fique acima do conteúdo */
+}
+
+/* Estilo para o logotipo */
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Estilo para os ícones */
+.icons a {
+    display: flex;
+    color: #cfcfcf;
+    font-size: 30px;
+    
+    align-items: center;
+}
+.icons i{
+    margin: 15px;
+    transform: 0.2s;
+}
+.header img{
+    height: 50px;
+}
+.icons i:hover{
+    transform: scale(1.1);
+    transform: 0.3s;
+    cursor: pointer;
+    color: #19242e;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+    .projects {
+        color: #ffffff;
+        padding: 100px;
+        width: 750px;
+        border-radius: 2px;
+        text-align: start;
+        border-left: 3px solid; /* Bordas apenas nas laterais */
+        border-right: 3px solid ; /* Bordas apenas nas laterais */
+        border-top: none; /* Remover a borda superior */
+        border-bottom: none; /* Remover a borda inferior */
+        animation: borderAnimation 7s infinite;
+    }
+    .projects h1{
+        font-size: 60px;
+        margin-bottom: 50px;
+    }
+    .projects a{
+      
+        font-size: 25px;
+       
+        color: #cfcfcf;
+        font-weight: bold;
+        transition: 0.2s; animation: underlineAnimation 7s infinite; 
+       
+    }
+    .projects p{
+         margin-top: 20px;
+        font-size: 20px;
+    }
+    .projects li{
+        margin-bottom: 20px;
+    }
+    .projects a:hover{
+        color: #fff; 
+         text-decoration: none;
+        transition: 0.2s;
+       
+    }
+    .rodape {
+        text-align: right;
+        justify-content: space-between;
+        display: flex;
+    }
+    @keyframes underlineAnimation {
+        0% {
+            text-decoration-color: #ffffff;
+        }
+        25% {
+            text-decoration-color: #00bfe0; /* Troque esta cor pela cor desejada */
+        }
+        50% {
+            text-decoration-color: #213550; /* Troque esta cor pela cor desejada */
+        }
+        75% {
+            text-decoration-color: #217ee9;
+        }
+        100% {
+            text-decoration-color: #588ac4;
+        }
+    }
+    
+    .square {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        opacity: 0;
+        transform: translateX(-100%);
+        margin: 0 10px; /* Ajuste o espaçamento entre os quadrados conforme necessário */
+    }
+    
+    .square:nth-child(1) {
+        animation-delay: 0.5s; /* Ajuste o atraso da animação para o primeiro quadrado */
+    }
+    
+    .square:nth-child(2) {
+        animation-delay: 1s; /* Ajuste o atraso da animação para o segundo quadrado */
+    }
+    
+    .square:nth-child(3) {
+        animation-delay: 1.5s; /* Ajuste o atraso da animação para o terceiro quadrado */
+    }
+    
+    @keyframes slideFromLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .square {
+        animation: slideFromLeft 0.9s ease forwards;
+    }
+    
+.squares{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square{
+    width: 100px;
+    margin: 20px;
+   background-color: #00bee000;
+   transition: 0.2s;
+    height: 100px;
+}
+.square h1{
+    font-size: 15px;
+}
+.square img{
+     border-radius: 10px;
+     
+}
+.square img:hover{
+    transition: 0.2s;
+  transform: scale(1.1);
+}
+.Btn {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#44a8ea, #193e61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    transition: 0.2s;
+  }
+  .Btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    transition: opacity 0.2s; /* Adiciona uma transição suave para a opacidade */
+}
+
+.Btn:hover {
+    opacity: 0.7; /* Reduz um pouco a opacidade ao passar o mouse */
+}
+
+  .Btn:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+  
+  .arrow path {
+    fill: white;
+  }
+  
+  .text {
+    font-size: 5px;
+    width: 100px;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -18px;
+    opacity: 0;
+    transition-duration: .7s;
+  }
+  
+  .Btn:hover .text {
+    opacity: 1;
+    transition-duration: .7s;
+  }
+  
+  .Btn:hover .arrow {
+    animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+@media screen and (max-width:800px){
+    .textpage1 {
+        padding: 50px;
+        font-size: 24px;
+        border: 3px solid;
+        animation: borderAnimation 6s infinite;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #f0f0f000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 56px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .icons a {
+        display: contents;
+        color: #cfcfcf;
+        font-size: 30px;
+        align-items: center;
+    }
+    .textpage2p {
+        font-size: 20px;
+    }
+    .cursor{
+        display: none;
+    }
+    .page3 {
+        background-color: #0d1822;
+        padding: 28px;
+    }
+    .projects {
+        color: #ffffff;
+        padding: 48px;
+        width: 685px;
+        border-radius: 2px;
+        text-align: start;
+        border-left: 3px solid;
+        border-right: 6px solid;
+        border-top: none;
+        border-bottom: none;
+        animation: borderAnimation 7s infinite;
+    }
+    .projects h1 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .projects a {
+        font-size: 15px;
+        color: #cfcfcf;
+        font-weight: bold;
+        transition: 0.2s;
+        animation: underlineAnimation 7s infinite;
+    }
+}
+    
+
